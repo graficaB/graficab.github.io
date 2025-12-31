@@ -1,26 +1,32 @@
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gráfica B | Designer Gráfico</title>
 
 <style>
-    body {
+    * {
         margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
-        background-color: #f4f4f4;
-        color: #333;
+        padding: 0;
+        box-sizing: border-box;
     }
 
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f2f2f2;
+        color: #222;
+        line-height: 1.6;
+    }
+
+    /* ANIMAÇÃO */
     .fade {
-        animation: fadeUp 1.2s ease forwards;
         opacity: 0;
+        transform: translateY(30px);
+        animation: fadeUp 1s ease forwards;
     }
 
     @keyframes fadeUp {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
-        }
         to {
             opacity: 1;
             transform: translateY(0);
@@ -28,41 +34,95 @@
     }
 
     header {
-        background: #111;
+        background: linear-gradient(135deg, #000, #222);
         color: white;
-        padding: 60px 20px;
+        padding: 90px 20px;
         text-align: center;
     }
 
-    section {
-        padding: 60px 20px;
-        max-width: 900px;
-        margin: auto;
-    }
-
-    h1, h2 {
+    header h1 {
+        font-size: 48px;
         margin-bottom: 10px;
+        letter-spacing: 2px;
     }
 
-    .services p {
-        margin: 8px 0;
+    header p {
+        font-size: 18px;
+        opacity: 0.9;
+    }
+
+    section {
+        max-width: 1000px;
+        margin: auto;
+        padding: 70px 20px;
+    }
+
+    h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+    h2::after {
+        content: "";
+        width: 60px;
+        height: 4px;
+        background: #000;
+        display: block;
+        margin-top: 10px;
+    }
+
+    .about p {
+        font-size: 18px;
+        max-width: 800px;
+    }
+
+    .services {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .card {
+        background: white;
+        padding: 25px;
+        border-radius: 8px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        transition: transform 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-8px);
+    }
+
+    .contact {
+        text-align: center;
     }
 
     .contact a {
         display: inline-block;
-        margin-top: 10px;
+        margin-top: 20px;
+        background: #000;
         color: white;
-        background: #111;
-        padding: 12px 20px;
+        padding: 15px 30px;
         text-decoration: none;
-        border-radius: 4px;
+        border-radius: 30px;
+        font-size: 18px;
+        transition: background 0.3s;
+    }
+
+    .contact a:hover {
+        background: #333;
     }
 
     footer {
-        background: #111;
+        background: #000;
         color: white;
         text-align: center;
-        padding: 20px;
+        padding: 25px;
+        margin-top: 40px;
+        font-size: 14px;
     }
 </style>
 </head>
@@ -74,31 +134,37 @@
     <p>Designer Gráfico • Identidade Visual • Social Media</p>
 </header>
 
-<section class="fade">
+<section class="about fade">
     <h2>Sobre</h2>
     <p>
-        Sou designer gráfico e fundador da <strong>Gráfica B</strong>, atuando na criação de identidades visuais,
-        logotipos e artes para redes sociais. Desenvolvo projetos com foco em estratégia,
-        criatividade e profissionalismo, ajudando marcas a se destacarem no mercado.
+        Sou designer gráfico e fundador da <strong>Gráfica B</strong>, especializado na criação de
+        identidades visuais, logotipos e artes para redes sociais. Desenvolvo projetos com foco
+        em criatividade, estratégia e profissionalismo, ajudando marcas a se destacarem no mercado.
     </p>
 </section>
 
-<section class="fade services">
+<section class="fade">
     <h2>Serviços</h2>
-    <p>✔ Identidade visual</p>
-    <p>✔ Criação de logotipos</p>
-    <p>✔ Artes para redes sociais</p>
-    <p>✔ Materiais gráficos</p>
+
+    <div class="services">
+        <div class="card">Identidade Visual</div>
+        <div class="card">Criação de Logotipos</div>
+        <div class="card">Artes para Instagram</div>
+        <div class="card">Materiais Gráficos</div>
+    </div>
 </section>
 
-<section class="fade contact">
+<section class="contact fade">
     <h2>Contato</h2>
     <p>Email: henriquebatistello1@gmail.com</p>
-    <a href="https://wa.me/5549999131797" target="_blank">Falar no WhatsApp</a>
+
+    <a href="https://wa.me/5549999131797" target="_blank">
+        Falar no WhatsApp
+    </a>
 </section>
 
 <footer>
-    <p>© 2025 - Gráfica B</p>
+    © 2025 - Gráfica B | Designer Gráfico
 </footer>
 
 </body>
