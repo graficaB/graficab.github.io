@@ -6,55 +6,58 @@
 <title>Gráfica B | Design Gráfico</title>
 
 <style>
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    margin: 0;
-    padding: 0;
+/* FUNDO MÁRMORE */
+html, body {
+    min-height: 100%;
     font-family: Arial, Helvetica, sans-serif;
     color: #ffffff;
 
     background:
-        radial-gradient(circle at 20% 30%, rgba(180,0,0,0.35), transparent 35%),
-        radial-gradient(circle at 80% 70%, rgba(120,0,0,0.25), transparent 40%),
+        radial-gradient(circle at 15% 25%, rgba(180,0,0,0.35), transparent 40%),
+        radial-gradient(circle at 85% 75%, rgba(120,0,0,0.25), transparent 45%),
         linear-gradient(120deg,
             #000000 0%,
-            #0a0a0a 25%,
-            #140000 50%,
-            #0a0a0a 75%,
+            #0a0a0a 30%,
+            #160000 50%,
+            #0a0a0a 70%,
             #000000 100%
         );
 }
-    body::before {
+
+/* VEIOS DO MÁRMORE */
+body::before {
     content: "";
     position: fixed;
     inset: 0;
     background:
         linear-gradient(25deg,
             transparent 0%,
-            rgba(255,0,0,0.08) 45%,
-            transparent 55%
+            rgba(255,0,0,0.10) 46%,
+            transparent 56%
         ),
         linear-gradient(-35deg,
             transparent 0%,
-            rgba(255,0,0,0.06) 48%,
+            rgba(255,0,0,0.07) 48%,
             transparent 60%
         );
     pointer-events: none;
 }
+
 /* HERO */
 .hero {
-    background: linear-gradient(135deg, #000000, #1a0000);
-    padding: 100px 20px;
+    padding: 110px 20px;
     text-align: center;
 }
 
 .hero h1 {
-    font-size: 50px;
+    font-size: 54px;
     letter-spacing: 2px;
 }
 
@@ -65,40 +68,34 @@ body {
 .hero p {
     margin-top: 15px;
     font-size: 20px;
-    color: #cccccc;
+    color: #dddddd;
 }
 
 .hero a {
     display: inline-block;
-    margin-top: 30px;
+    margin-top: 35px;
+    padding: 16px 40px;
     background: #e10600;
-    color: white;
-    padding: 18px 40px;
+    color: #fff;
     border-radius: 40px;
     text-decoration: none;
-    font-size: 18px;
     font-weight: bold;
-    transition: 0.3s;
 }
 
-.hero a:hover {
-    background: #ff1a1a;
-}
-
-/* SECTIONS */
+/* SEÇÕES */
 section {
     max-width: 1100px;
     margin: auto;
-    padding: 80px 20px;
+    padding: 90px 20px;
 }
 
-h2 {
-    font-size: 36px;
+section h2 {
     text-align: center;
+    font-size: 36px;
     margin-bottom: 40px;
 }
 
-h2 span {
+section h2 span {
     color: #e10600;
 }
 
@@ -107,8 +104,8 @@ h2 span {
     max-width: 850px;
     margin: auto;
     font-size: 18px;
-    color: #cccccc;
     text-align: center;
+    color: #cccccc;
 }
 
 /* SERVIÇOS */
@@ -119,17 +116,11 @@ h2 span {
 }
 
 .servico {
-    background: #111;
-    border: 1px solid #222;
+    background: rgba(15,15,15,0.9);
+    border: 1px solid rgba(255,255,255,0.06);
     padding: 35px 25px;
+    border-radius: 14px;
     text-align: center;
-    border-radius: 12px;
-    transition: 0.3s;
-}
-
-.servico:hover {
-    transform: translateY(-8px);
-    border-color: #e10600;
 }
 
 .servico h3 {
@@ -144,35 +135,27 @@ h2 span {
 .servico a {
     display: inline-block;
     margin-top: 18px;
-    background: transparent;
-    color: #e10600;
-    border: 2px solid #e10600;
-    padding: 10px 25px;
+    padding: 10px 26px;
     border-radius: 30px;
+    border: 2px solid #e10600;
+    color: #e10600;
     text-decoration: none;
     font-weight: bold;
-    transition: 0.3s;
-}
-
-.servico a:hover {
-    background: #e10600;
-    color: white;
 }
 
 /* CTA */
 .cta {
-    background: linear-gradient(135deg, #1a0000, #000);
     text-align: center;
-    padding: 90px 20px;
+    padding: 100px 20px;
 }
 
 .cta h2 {
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 .cta a {
     background: #e10600;
-    color: white;
+    color: #ffffff;
     padding: 18px 45px;
     border-radius: 40px;
     text-decoration: none;
@@ -182,7 +165,6 @@ h2 span {
 
 /* FOOTER */
 footer {
-    background: #000;
     text-align: center;
     padding: 25px;
     font-size: 14px;
@@ -193,72 +175,59 @@ footer {
 
 <body>
 
-<!-- HERO -->
 <div class="hero">
     <h1><span>Gráfica</span> B</h1>
-    <p>Design gráfico moderno para marcas que querem se destacar</p>
-    <a href="https://wa.me/5549999131797" target="_blank">
-        Falar no WhatsApp
-    </a>
+    <p>Design gráfico moderno e profissional</p>
+    <a href="https://wa.me/5549999131797" target="_blank">WhatsApp</a>
 </div>
 
-<!-- SOBRE -->
 <section class="sobre">
     <h2>Sobre a <span>Gráfica B</span></h2>
     <p>
-        Sou designer gráfico e fundador da <strong>Gráfica B</strong>, atuando na criação de
-        identidades visuais, logotipos e artes para redes sociais. Mesmo jovem, trabalho com foco
-        em profissionalismo, criatividade e compromisso com resultados reais para cada cliente.
+        Sou designer gráfico e fundador da Gráfica B. Desenvolvo identidades visuais,
+        logotipos e artes para redes sociais com foco em criatividade, profissionalismo
+        e resultados reais.
     </p>
 </section>
 
-<!-- SERVIÇOS -->
 <section>
     <h2><span>Serviços</span></h2>
 
     <div class="servicos">
-
         <div class="servico">
             <h3>Identidade Visual</h3>
-            <p>Criação completa da identidade da sua marca.</p>
-            <a href="https://wa.me/5549999131797?text=Olá,%20quero%20Identidade%20Visual" target="_blank">Orçamento</a>
+            <p>Marca completa e profissional.</p>
+            <a href="https://wa.me/5549999131797">Orçamento</a>
         </div>
 
         <div class="servico">
             <h3>Logotipo</h3>
-            <p>Logotipos modernos e profissionais.</p>
-            <a href="https://wa.me/5549999131797?text=Olá,%20quero%20Logotipo" target="_blank">Orçamento</a>
+            <p>Logos modernos e exclusivos.</p>
+            <a href="https://wa.me/5549999131797">Orçamento</a>
         </div>
 
         <div class="servico">
-            <h3>Artes para Instagram</h3>
-            <p>Posts criativos para redes sociais.</p>
-            <a href="https://wa.me/5549999131797?text=Olá,%20quero%20Artes%20para%20Instagram" target="_blank">Orçamento</a>
+            <h3>Artes Instagram</h3>
+            <p>Posts criativos e estratégicos.</p>
+            <a href="https://wa.me/5549999131797">Orçamento</a>
         </div>
 
         <div class="servico">
-            <h3>Materiais Gráficos</h3>
-            <p>Cartões, banners, panfletos e mais.</p>
-            <a href="https://wa.me/5549999131797?text=Olá,%20quero%20Materiais%20Gráficos" target="_blank">Orçamento</a>
+            <h3>Material Gráfico</h3>
+            <p>Cartões, banners e impressos.</p>
+            <a href="https://wa.me/5549999131797">Orçamento</a>
         </div>
-
     </div>
 </section>
 
-<!-- CTA -->
 <div class="cta">
-    <h2>Pronto para elevar o visual da sua marca?</h2>
-    <a href="https://wa.me/5549999131797" target="_blank">
-        Solicitar orçamento
-    </a>
+    <h2>Vamos elevar sua marca?</h2>
+    <a href="https://wa.me/5549999131797" target="_blank">Falar agora</a>
 </div>
 
 <footer>
-    © 2025 - Gráfica B | Design Gráfico
+    © 2025 • Gráfica B
 </footer>
 
 </body>
 </html>
-
-
-
