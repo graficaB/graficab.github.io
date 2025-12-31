@@ -29,6 +29,23 @@ body {
             #000000 100%
         );
 }
+    body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
+        linear-gradient(25deg,
+            transparent 0%,
+            rgba(255,0,0,0.08) 45%,
+            transparent 55%
+        ),
+        linear-gradient(-35deg,
+            transparent 0%,
+            rgba(255,0,0,0.06) 48%,
+            transparent 60%
+        );
+    pointer-events: none;
+}
 /* HERO */
 .hero {
     background: linear-gradient(135deg, #000000, #1a0000);
@@ -242,5 +259,6 @@ footer {
 
 </body>
 </html>
+
 
 
